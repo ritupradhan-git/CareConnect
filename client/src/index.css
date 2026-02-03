@@ -6,3 +6,9 @@
 .active hr{
   @apply block
 }
+::-webkit-scrollbar{
+  @apply hidden
+}
+@utility grid-auto-fit-200 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
