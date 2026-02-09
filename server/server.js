@@ -3,6 +3,7 @@ import cors from 'cors';
 import 'dotenv/config';
 import connectDB from './config/mongodb.js';
 import connectCloundinary from './config/cloudinary.js';
+import adminRouter from './routes/adminRoute.js';
 //app config
 
 const app=express();
@@ -16,6 +17,7 @@ app.use(express.json());//request will pass through this-convert incoming json t
 app.use(cors());//Allows cross origin frontend-backend setup with each other
 
  //api endpoints
+app.use('/api/admin',adminRouter);
 
  app.get('/',(req,res)=>{
     res.send("API Working");
