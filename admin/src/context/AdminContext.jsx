@@ -1,13 +1,15 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 
 export const AdminContext=createContext();//global box for storing data
 
 const AdminContextProvider=(props)=>{ //wrapper component-wraps the whole app
-    const currencySymbol='$'
+    const [aToken,setAToken]=useState('');
+    const backendUrl=import.meta.env.VITE_BACKEND_URL
     const value={//data stored globally
-        doctors,
-        currencySymbol
+        aToken,
+        setAToken,
+        backendUrl,
     }
     return(
         <AdminContext.Provider value={value}>
