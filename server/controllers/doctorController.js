@@ -1,0 +1,22 @@
+import doctorModel from "../models/doctorModel.js";
+
+const changeAvailability=async(req,res)=>{
+    try {
+        const {docId}=req.body;
+        const doctor = await doctorModel.findById(docId);
+
+    if (!doctor) {
+      return res.json({ success: false, message: "Doctor not found" });
+    }
+
+    doctor.available = !doctor.available;
+    await doctor.save();
+
+    res.json({ success: true, message: "Availability changed" });
+    } catch (error) {
+        console.log(error)
+        res.json({success:false,message:"Error"})
+    }
+}
+
+export default changeAvailability
