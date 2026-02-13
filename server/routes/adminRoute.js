@@ -2,7 +2,7 @@ import express from 'express';
 import { addDoctor, allDoctors, loginAdmin } from '../controllers/adminController.js';
 import upload from '../middleware/multer.js';
 import authAdmin from '../middleware/authAdmin.js';
-import changeAvailability from '../controllers/doctorController.js';
+import {changeAvailability} from '../controllers/doctorController.js';
 
 const adminRouter=express.Router();//Creates a mini app for admin routes
 //Sends a post req with a milderware of multer for image upload
