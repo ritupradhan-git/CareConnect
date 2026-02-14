@@ -10,6 +10,9 @@ const AppContextProvider=(props)=>{ //wrapper component-wraps the whole app
     const backendUrl=import.meta.env.VITE_BACKEND_URL;
 
     const [doctors,setDoctors]=useState([]);
+    const [token,setToken]=useState(localStorage.getItem('token')?localStorage.getItem('token'):false);
+
+
     const getDoctorsData=async ()=>{
         try {
             const {data}=await axios.get(backendUrl+'/api/doctor/list');
@@ -26,7 +29,10 @@ const AppContextProvider=(props)=>{ //wrapper component-wraps the whole app
     },[]);
     const value={//data stored globally
         doctors,
-        currencySymbol
+        currencySymbol,
+        token,
+        setToken,
+        backendUrl
     }
     return(
         <AppContext.Provider value={value}>
