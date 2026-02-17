@@ -7,7 +7,7 @@ export const AppContext=createContext();//global box for storing data
 const AppContextProvider=(props)=>{ //wrapper component-wraps the whole app
     const currencySymbol='$'
 
-    const backendUrl=import.meta.env.VITE_BACKEND_URL;
+    const backendUrl='https://careconnect-backend-esfq.onrender.com';
 
     const [doctors,setDoctors]=useState([]);
     const [token,setToken]=useState(localStorage.getItem('token')?localStorage.getItem('token'):false);
