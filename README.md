@@ -15,7 +15,7 @@ It enables appointment booking, patient record management, and seamless communic
 - 📁 Medical Record Storage
 - 🔔 Notifications & Updates
 - 🛠 Admin Control Panel
-- 📱 Responsive UI Design
+- 📱 Responsive UI
 
 ---
 
