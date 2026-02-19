@@ -1,7 +1,7 @@
 # CareConnect 🩺
 
 CareConnect is a healthcare web platform designed to simplify the interaction between patients, doctors, and administrators.  
-It enables appointment booking, patient record management, and seamless communication in one centralized system.
+It enables appointment booking, patient record management, and seamless communication in one centralized system. Added Responsive UI
 
 🌐 **Live Demo:** https://careconnect-client.onrender.com/
 
